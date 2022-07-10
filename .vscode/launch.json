@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-TravelAppApplication<evergreen-travel-app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.snhu.evergreentravelapp.TravelAppApplication",
+            "projectName": "evergreen-travel-app",
+            "args": ""
+        }
+    ]
+}

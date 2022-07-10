@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>Evergreen Travel Services Login</title>
+
+        
+        <!-- Start of Bootstrap core CSS -->
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sign-in/">
+        <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+                    <style>
+                    .bd-placeholder-img {
+                        font-size: 1.125rem;
+                        text-anchor: middle;
+                        -webkit-user-select: none;
+                        -moz-user-select: none;
+                        user-select: none;
+                    }
+
+                    @media (min-width: 768px) {
+                        .bd-placeholder-img-lg {
+                        font-size: 3.5rem;
+                        }
+                    }
+                    </style>
+        <!-- End of Bootstrap core CSS -->
+
+    </head>
+    <body class="text-center">  
+        
+        <br>
+
+        <form>
+            <img class="mb-4" src="../assets/brand/account_travelplanelogo.png" alt="" width="120" height="100">
+            <h1 class="h3 mb-3 fw-normal">Welcome to the Evergreen Travel Services User Portal</h1>
+            <p>Please create an account below to continue booking.</p>
+
+            <div><label> Username : <input type="text" name="registerusername" id="registerusername"/> </label></div>
+            <div><label> Password: <input type="password" name="registerpassword" id="registerpassword"/> </label></div>
+            <br>
+            <div><input type="button" value="Register Account" id="register"/></div>
+
+        </form>
+
+        <form>
+            <br>
+            <br>
+            <p>Already have an account? Login below!</p>
+
+            <div><label> Username : <input type="text" name="loginusername" id="loginusername"/> </label></div>
+            <div><label> Password: <input type="password" name="loginpassword" id="loginpassword"/> </label></div>
+            <br>
+            <div><input type="button" value="Log In" id="login"/></div>
+
+        </form>
+
+
+
+    </main>
+
+            <!--Below references that we will be using javascript-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+            <!--Below references the js file created to connect to userportal API-->
+            <script src="./js/snhu_js_project/userportal.js"></script>	
+
+
+    </body>
+</html>

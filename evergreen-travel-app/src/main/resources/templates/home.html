@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<!--Language code of zxx is parrt of the ISO 639-2 and ISO 639-3 standards of language acronyms meaning "no linguistic content"-->
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/fav.png">
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib">
+    <!-- Meta Description -->
+    <meta name="description" content="">
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="">
+    <!-- meta character set -->
+    <meta charset="UTF-8">
+    <!-- Site Title -->
+    <title>Evergreen Travel Services</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--CSS============================================= -->
+
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/grid/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header id="header">
+
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="home"><img src="img/logo.png" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <!-- NAVIGATION MENU -->
+                    <ul class="nav-menu">
+                        <li><a href="home">Home</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                        <li><a href="login">Logout</a></li>
+                    </ul>
+                </nav><!-- #nav-menu-container -->
+
+            </div>
+        </div>
+    </header><!-- #header -->
+
+    <!-- start banner Area -->
+    <section class="banner-area relative">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row fullscreen align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-6 banner-left">
+                    <h6 class="text-white">The Opportunities are Endless</h6>
+                    <h1 class="text-white">Evergreen Travel Services</h1>
+                    <p class="text-white">
+                        Find your next travel destination.
+                    </p>
+                    <a href="#" class="primary-btn text-uppercase">Find your next destination here</a>
+                </div>
+
+                <!--Start of Flight Search Form-->
+                <div class="col-lg-4 col-md-6 banner-right">
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="flight-tab" data-toggle="tab" href="#flight" role="tab"
+                                aria-controls="flight" aria-selected="true">Flights</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="flight" role="tabpanel" aria-labelledby="flight-tab">
+                            <form class="form-wrap" id="flight">
+
+                                <input type="text" class="form-control" id="fly_from" name="fly_from"
+                                    placeholder="From Airport (IATA Code)" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'From Airport'">
+
+                                <input type="text" class="form-control" id="fly_to" name="fly_to"
+                                    placeholder="To Airport (IATA Code)" onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'To Airport'">
+
+                                <input type="date" class="form-control date-picker" id="date_from" name="date_from"
+                                    placeholder="Date Range From " onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Start '">
+
+                                <input type="date" class="form-control date-picker" id="date_to" name="date_to"
+                                    placeholder="Date Range To " onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Return '">
+
+                                <input type="number" min="1" max="20" class="form-control" id="adults" name="adults"
+                                    placeholder="# of Adults " onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Adults '">
+
+                                <input type="number" min="1" max="20" class="form-control" id="children" name="children"
+                                    placeholder="# of Children " onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Child '">
+
+                                <input type="number" min="1" max="20" class="form-control" id="infants" name="infants"
+                                    placeholder="# of Infants " onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Infant '">
+
+                                <a href="#flightresults"><button type="button" id="searchflights"
+                                        class="primary-btn text-uppercase">Search Flights</button></a>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <!--End of flight search form-->
+
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!--Start of Return Display of Flight Search/Check Out Form Results-->
+    <section class="flight-search-form-results relative">
+        <div class="container" id="flightresults">
+            <div class="title text-center">
+                <br>
+                <h1 class="mb-10">Your Fully Customized Flight is Here</h1>
+                <p>With the help of our powerful API partners - Kiwi and Aviationstack,</p>
+                <p>Evergreen Travel Services provides you the cheapest flight!</p>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-8 themed-grid-col">
+                    <p class="flightresults-description"></p>
+                </div>
+                <div class="col-6 col-md-4 themed-grid-col">
+                    <p class="flightresults-totalprice"></p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6 col-md-4 themed-grid-col">
+                    <p class="flightresults-airlinename"></p>
+                </div>
+                <div class="col-6 col-md-4 themed-grid-col">
+                    <p class="flightresults-departuretime"></p>
+                </div>
+                <div class="col-6 col-md-4 themed-grid-col">
+                    <p class="flightresults-arrivaltime"></p>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-6 col-md-4 themed-grid-col">
+                    <p class="flightresults-adults"></p>
+                </div>
+                <div class="col-6 col-md-4 themed-grid-col">
+                    <p class="flightresults-children"></p>
+                </div>
+                <div class="col-6 col-md-4 themed-grid-col">
+                    <p class="flightresults-infants"></p>
+                </div>
+            </div>
+
+            <!--Start of Booking Flight Check Out Form-->
+
+            <div class="container" id="flightcheckoutform">
+                <div class="title text-center">
+                    <br>
+                    <h1 class="mb-10">Want to Book this Flight?</h1>
+                    <p>Enter your booking credentials below to continue booking!</p>
+                </div>
+
+                <input type="text" class="form-control" id="booker-firstname" name="booker-firstname"
+                    placeholder="First Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'">
+
+                <input type="text" class="form-control" id="booker-lastname" name="booker-lastname"
+                    placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'">
+
+                <button type="button" id="booknow" class="primary-btn text-uppercase">Book Now</button>
+            </div>
+
+           <!--End of Booking Flight Check Out Form-->
+    </section>
+
+               <!-- The Modal -->
+               <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1 class="mb-10">Booking Confirmation</h1>
+
+                    <p><strong>Thank you for choosing Evergreen Traveler's Services!</strong></p>
+                    <p><strong>We are excited for your next adventure.</strong></p>
+                    <p><strong>Please see below regarding confirmation of your booking details.</strong></p>
+         
+                    <br>
+                    <p class="confirmation-bookerfirstname"></p>
+                    <p class="confirmation-bookerlastname"></p>
+                    <br>
+                    <p class="confirmation-flightairlinecode"></p>
+                    <p class="confirmation-flightcost"></p>
+                    <br>
+                    <p class="confirmation-flightnumberadults"></p>
+                    <p class="confirmation-flightnumberchildren"></p>
+                    <p class="confirmation-flightnumberinfants"></p>
+                    <br>
+                    <p class="confirmation-departureiata"></p>
+                    <p class="confirmation-departurecity"></p>
+                    <p class="confirmation-departuretime"></p>
+                    <br>
+                    <p class="confirmation-arrivaliata"></p>
+                    <p class="confirmation-arrivalcity"></p>
+                    <p class="confirmation-arrivaltime"></p>
+                </div>
+
+            </div>
+    <!--End of Return Display of Flight Search/Check Out Form Results-->
+
+    <!--End of flight Quotes-->
+
+
+    <!-- Start testimonial Area -->
+    <section class="testimonial-area section-gap">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Testimonial from our Clients</h1>
+                        <p>Share to others and you impart wisdom. Learn from others and you gain wisdom in different
+                            perspectives. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="active-testimonial">
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="img/elements/user1.png" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>
+                                Loved my experience with booking with ETS! It was fun, simple, and very quick.
+                            </p>
+                            <h4>Mona LaVuea</h4>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="img/elements/user2.png" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>
+                                Another good option for traveler services! Recommended for users looking for a simple
+                                way to find flights.
+                            </p>
+                            <h4>Vera Wang</h4>
+                            <div class="star">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End testimonial Area -->
+
+    <!-- Start "Could not find your flight?" section -->
+    <section class="home-about-area">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-end">
+                <div class="col-lg-6 col-md-12 home-about-left">
+                    <h1>
+                        Could not find your flight? <br>
+                        Let us know! <br>
+                    </h1>
+                    <p>
+                        Let our highly rated customer service team find these flight options for you. It is our mission
+                        to provide flights to your next vacation destination with you in mind.
+                    </p>
+                    <a href="#" class="primary-btn text-uppercase">Contact Us</a>
+                </div>
+                <div class="col-lg-6 col-md-12 home-about-right no-padding">
+                    <img class="img-fluid" src="img/cannotfindflight.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of "Could not find your flight?" section -->
+
+
+    <!-- start footer Area -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-3  col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>About ETS</h6>
+                        <p>
+                            What started as a personal journey to find quality flights has now developed into a passion
+                            to share the journey with others
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Navigation Links</h6>
+                        <div class="row">
+                            <div class="col">
+                                <ul>
+                                    <li><a href="home">Home</a></li>
+                                    <li><a href="about">About</a></li>
+                                    <li><a href="login">Logout</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <ul>
+                                    <li><a href="team">Team</a></li>
+                                    <li><a href="flights">Flights</a></li>
+                                    <li><a href="populardestinations">Popular Destinations</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-md-6 col-sm-6">
+                    <div class="single-footer-widget">
+                        <h6>Subscribe</h6>
+                        <p>
+                            Interested in learning of the best deals as they come onto the market? Sign up below!
+                        </p>
+                        <div id="mc_embed_signup">
+                            <form target="_blank"
+                                action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                method="get" class="subscription relative">
+                                <div class="input-group d-flex flex-row">
+                                    <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                    <button class="btn bb-btn"><span class="lnr lnr-location"></span></button>
+                                </div>
+                                <div class="mt-10 info"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-md-6 col-sm-6">
+                    <div class="single-footer-widget mail-chimp">
+                        <h6 class="mb-20">Testimonials</h6>
+                        <ul class="instafeed d-flex flex-wrap">
+                            <li><img src="img/i1.jpg" alt=""></li>
+                            <li><img src="img/i2.jpg" alt=""></li>
+                            <li><img src="img/i3.jpg" alt=""></li>
+                            <li><img src="img/i4.jpg" alt=""></li>
+                            <li><img src="img/i5.jpg" alt=""></li>
+                            <li><img src="img/i6.jpg" alt=""></li>
+                            <li><img src="img/i7.jpg" alt=""></li>
+                            <li><img src="img/i8.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                <p class="col-lg-8 col-sm-12 footer-text m-0">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
+                    made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                        target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="#"><em class="fa fa-facebook"></em></a>
+                    <a href="#"><em class="fa fa-twitter"></em></a>
+                    <a href="#"><em class="fa fa-dribbble"></em></a>
+                    <a href="#"><em class="fa fa-behance"></em></a>
+                </div>
+            </div>
+        </div>
+
+
+    </footer>
+    <!-- End footer Area -->
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/hoverIntent.js"></script>
+    <script src="js/superfish.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!--Below references that we will be using javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+    <!--Below references the js file created to connect to kiwiflightapi API-->
+    <script src="./js/snhu_js_project/searchflightapi.js"></script>
+
+</body>
+
+</html>
