@@ -28,3 +28,4 @@ This program explores how to develop and deploy distributed web applications, ut
 - [IT 634 Syllabus.pdf](https://github.com/OkinawanEvergreen/Evergreen-Travel-Website/files/9079751/IT.634.Syllabus.pdf)
 - [9-2 Reflection Paper.docx](https://github.com/OkinawanEvergreen/Evergreen-Travel-Website/files/9079753/9-2.Reflection.Paper.docx)
 - [Unit Tests and Proof of Functionality.docx](https://github.com/OkinawanEvergreen/Evergreen-Travel-Website/files/9079754/Unit.Tests.and.Proof.of.Functionality.docx)
+- [Screenshots.docx](https://github.com/OkinawanEvergreen/Evergreen-Travel-Website/files/9079757/Screenshots.docx)
