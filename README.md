@@ -1,5 +1,5 @@
 # Evergreen Travel Website
-This program is based on the assigned final project for IT-634 Distributed App Development.
+Final Project Coursework for SNHU Masters of Science in IT/Software Development - IT-634 Distributed App Development.
 
 ## Features
 This program explores how to develop and deploy distributed web applications, utilizing multiple programming languages and present day functionalities.
