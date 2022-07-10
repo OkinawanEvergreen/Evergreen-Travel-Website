@@ -1,5 +1,5 @@
 # Evergreen Travel Website
-Final Project Coursework for SNHU Masters of Science in IT/Software Development - IT-634 Distributed App Development.
+Final Project Coursework for SNHU Master of Science in IT/Software Development program - IT-634 Distributed App Development.
 
 ## Features
 This program explores how to develop and deploy distributed web applications, utilizing multiple programming languages and present day functionalities.
