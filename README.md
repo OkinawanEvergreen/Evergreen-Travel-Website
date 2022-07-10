@@ -9,6 +9,7 @@ This program explores how to develop and deploy distributed web applications, ut
 - RestAPI
 - HTML5
 - JAVA
+- JavaScript
 - Visual Studio Code
 - Spring Boot
 - mySQL
